@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Para você ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  background: #d9cfcf;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #d9cfcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#heart {
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* CONTEÚDO */
+#conteudo {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #ff6b81;
+  font-family: cursive;
+}
+
+/* CARTA */
+.carta {
+  width: 300px;
+  margin: 40px auto;
+  position: relative;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.tampa {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 100px solid #ff6b9c;
+}
+
+.conteudo-carta {
+  margin-top: 60px;
+}
+
+/* PLAYER */
+.card {
+  margin: 40px auto;
+  background: #111;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+audio {
+  width: 100%;
+}
+
+/* GALERIA */
+.galeria {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.foto {
+  position: absolute;
+  width: 160px;
+  background: white;
+  padding: 10px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.foto img {
+  width: 100%;
+}
+
+/* POSIÇÕES */
+.f1 { top: 40px; left: 40px; transform: rotate(-10deg); }
+.f2 { top: 30px; left: 200px; transform: rotate(8deg); }
+.f3 { top: 50px; left: 360px; transform: rotate(-6deg); }
+.f4 { top: 250px; left: 120px; transform: rotate(6deg); }
+.f5 { top: 200px; left: 320px; transform: rotate(-8deg); }
+.f6 { top: 40px; right: 200px; transform: rotate(5deg); }
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 100px auto;
+}
+
+.linha {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #ff6b81;
+  transform: translateX(-50%);
+}
+
+.momento {
+  width: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.conteudo-timeline {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.conteudo-timeline img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.momento::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 3px solid #ff6b81;
+  top: 30px;
+  border-radius: 50%;
+}
+
+.esquerda { left: 0; }
+.esquerda::after { right: -8px; }
+
+.direita { left: 50%; }
+.direita::after { left: -8px; }
+
+/* CHUVA DE CORAÇÕES */
+.heart-fall {
+  position: fixed;
+  top: -10px;
+  animation: cair linear infinite;
+}
+
+@keyframes cair {
+  to { transform: translateY(100vh); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <h2>Clique no coração ❤️</h2>
+  <div id="heart">❤️</div>
+</div>
+
+<!-- SITE -->
+<div id="conteudo">
+
+<h1>Para você, com amor 🌻</h1>
+
+<!-- CARTA -->
+<div class="carta">
+  <div class="tampa"></div>
+  <div class="conteudo-carta">
+    <h3>Querida ❤️</h3>
+    <p>Você é a melhor parte da minha vida.</p>
+    <p>Eu te amo muito 💖</p>
+  </div>
+</div>
+
+<!-- MÚSICA -->
+<div class="card">
+  <img src="img_3.jpg.jpeg">
+  <h3>Grava Essa Idéia</h3>
+  <p>Carol e Júnior</p>
+
+  <audio controls autoplay loop>
+    <source src="Carol e Junior - Grava essa ideia [AvxycxwK5zU].mp3">
+  </audio>
+</div>
+
+<!-- FOTOS ARRASTÁVEIS -->
+<div class="galeria">
+  <div class="foto f1"><img src="img_10.jpg.jpeg"></div>
+  <div class="foto f2"><img src="img_2.jpg.jpeg"></div>
+  <div class="foto f3"><img src="img_5.jpg.jpeg"></div>
+  <div class="foto f4"><img src="img_8.jpg.jpeg"></div>
+  <div class="foto f5"><img src="img_9.jpg.jpeg"></div>
+  <div class="foto f6"><img src="img_4.jpg.jpeg"></div>
+</div>
+
+<!-- TIMELINE -->
+<div class="timeline">
+
+  <div class="linha"></div>
+
+  <div class="momento esquerda">
+    <div class="conteudo-timeline">
+      <img src="inicio.JPEG.jpeg">
+      <h3>💖 Início</h3>
+      <p>Onde tudo começou.</p>
+    </div>
+  </div>
+
+  <div class="momento direita">
+    <div class="conteudo-timeline">
+      <img src="aventura.jpg.jpeg">
+      <h3>🌍 Aventura</h3>
+      <p>Momentos incríveis juntos.</p>
+    </div>
+  </div>
+
+  <div class="momento esquerda">
+    <div class="conteudo-timeline">
+      <img src="anonovo.jpg.jpeg">
+      <h3>🎆 Ano Novo</h3>
+      <p>Viramos o ano juntos.</p>
+    </div>
+  </div>
+
+  <div class="momento direita">
+    <div class="conteudo-timeline">
+      <img src="hoje.jpg.jpeg">
+      <h3>❤️ Hoje</h3>
+      <p>E seguimos juntos.</p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+let clicks = 0;
+let heart = document.getElementById("heart");
+
+heart.onclick = () => {
+  clicks++;
+  heart.style.fontSize = (50 + clicks * 10) + "px";
+
+  if (clicks >= 10) {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("conteudo").style.display = "block";
+    iniciarChuva();
+  }
+};
+
+/* CHUVA DE CORAÇÕES */
+function iniciarChuva() {
+  setInterval(() => {
+    let h = document.createElement("div");
+    h.classList.add("heart-fall");
+    h.innerHTML = "❤️";
+
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (10 + Math.random() * 20) + "px";
+    h.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(h);
+
+    setTimeout(() => h.remove(), 6000);
+  }, 300);
+}
+
+/* DRAG (PC + CELULAR) */
+const fotos = document.querySelectorAll(".foto");
+
+fotos.forEach(foto => {
+  let segurando = false;
+  let offsetX, offsetY;
+
+  function iniciar(e) {
+    segurando = true;
+    let evento = e.touches ? e.touches[0] : e;
+
+    offsetX = evento.clientX - foto.offsetLeft;
+    offsetY = evento.clientY - foto.offsetTop;
+
+    foto.style.cursor = "grabbing";
+  }
+
+  function mover(e) {
+    if (!segurando) return;
+
+    let evento = e.touches ? e.touches[0] : e;
+
+    foto.style.left = (evento.clientX - offsetX) + "px";
+    foto.style.top = (evento.clientY - offsetY) + "px";
+  }
+
+  function soltar() {
+    segurando = false;
+    foto.style.cursor = "grab";
+  }
+
+  foto.addEventListener("mousedown", iniciar);
+  foto.addEventListener("touchstart", iniciar);
+
+  document.addEventListener("mousemove", mover);
+  document.addEventListener("touchmove", mover);
+
+  document.addEventListener("mouseup", soltar);
+  document.addEventListener("touchend", soltar);
+});
+</script>
+
+<p style="text-align: center; position: bottom: 10px; width: 100%;">
+  eu te amo ❤️
+</p>
+
+
+</body>
+</html>
